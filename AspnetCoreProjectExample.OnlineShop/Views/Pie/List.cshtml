@@ -1,0 +1,24 @@
+﻿
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" />
+    <title>Sonas Pie Shop</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="" style="padding:20px; color:violet">@Model.CurrentCategory</h1>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var pie in Model.Pies)
+            {
+                <partial name="_pieCard" model="pie"/>
+            }
+        </div>
+    </div>
+</body>
+</html>

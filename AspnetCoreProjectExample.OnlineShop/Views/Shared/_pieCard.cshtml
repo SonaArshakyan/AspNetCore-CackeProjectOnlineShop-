@@ -1,0 +1,29 @@
+﻿@model Pie
+
+<div class="col-sm-3">
+    <div class="card" style="width:100%">
+
+        <div class="card-image">
+            <img class="img-responsive" src="@Model.ImageUrl" style="width:100%">
+            <span class="card-title " style="color:palevioletred ; font-size:25px;">@Model.Name</span>
+            <span class="card-title text-center" style="color:green;font-size:25px; float:right">@Model.Prices $</span>
+        </div>
+        <div class="card-content">
+            <p> @Model.ShortDescription</p>
+            <p> @Model.LongDescription</p>
+        </div>
+        <div class="card-action">
+
+            <a asp-controller="Pie" asp-action="Detail" asp-route-id="@Model.PieId">Detail</a>
+        </div>
+        <div class="addToCart">
+            <a  class="btn btn-primary"
+               asp-controller="ShoppingCart"
+               asp-action="AddToShoppingCart"
+               asp-route-pieId="@Model.PieId"
+               >
+                Add To Card
+            </a>
+        </div>
+    </div>
+</div>

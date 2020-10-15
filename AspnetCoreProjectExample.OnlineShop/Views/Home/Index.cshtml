@@ -1,0 +1,21 @@
+﻿@model HomeViewModel
+
+<partial name="_Carousel" />
+
+
+<div class="container">
+    <div class=" row">
+        <div class="col-lg-1">  </div>
+        <div class="col-lg-10">
+            <h1 class="text-center">Pies of Week</h1>
+            @foreach (var pie in Model.PiesOfTheWeek)
+            {
+                <partial name="_pieCard" model="pie" />
+            }
+        </div>
+        <div class="col-lg-1">  </div>
+
+    </div> 
+</div>
+
+

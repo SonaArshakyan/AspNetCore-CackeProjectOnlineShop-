@@ -1,0 +1,15 @@
+﻿body {
+    background-color: seashell ;
+}
+.tableTr {
+    background-color: pink;
+    color: white;
+}
+table td {
+    padding: 10px;
+    background-color: lightyellow;
+}
+.items{
+    text-decoration:none;
+    color:gray!important;
+}

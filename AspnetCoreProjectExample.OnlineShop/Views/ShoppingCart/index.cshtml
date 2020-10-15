@@ -1,0 +1,39 @@
+﻿
+<h2 class="text-center" style="color:lightcoral">Your shopping cart</h2>
+<h4 class="text-center" style="color:lightsalmon">Here are the delicious pies of your shopping cart</h4>
+<br />
+
+<table class=" " style="width:100%">
+    <thead>
+        <tr class="tableTr">
+            <th class="text-center">Selected amount</th>
+            <th class="text-center">Pie</th>
+            <th class="text-right">Price</th>
+            <th class="text-right">SubTotal</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var line in Model.ShoppingCart.ShoppingCartItems)
+        {
+            <tr>
+                <td class=" text-center"> @line.Amount</td>
+                <td class=" text-center"> @line.Pie.Name</td>
+                <td class=" text-right"> @line.Pie.Prices</td>
+                <td class=" text-right">
+                    @((line.Amount * line.Pie.Prices ).ToString("c"))
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        @*<tr>
+                <td colspan="3" class="text-right">Total:</td>
+            </tr>*@
+    </tfoot>
+
+</table>
+<div class="text-center">
+    <a class="btn btn-primary" asp-controller="Order" asp-action="Checkout">Check out now!</a>
+</div>

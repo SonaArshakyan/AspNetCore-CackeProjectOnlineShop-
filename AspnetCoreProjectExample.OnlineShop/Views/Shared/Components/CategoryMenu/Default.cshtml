@@ -1,0 +1,14 @@
+﻿
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pies
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            @foreach (var category in Model)
+            {
+                <a asp-action="List" asp-controller="Pie" asp-route-category="@category.CategoryName">@category.CategoryName</a>
+                <br />
+            }
+            <a asp-action="List" asp-controller="Pie" >View All</a>
+        </div>
+    </li>
